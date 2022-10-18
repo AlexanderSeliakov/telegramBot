@@ -8,14 +8,16 @@ import { useTelegram } from './Hooks/useTelegram'
 function App() {
 	const { tg, onToggleButton, user } = useTelegram()
 
-	const [name, setname] = useState('')
+	const [name, setname] = useState(user?.usernames)
 	useEffect(() => {
 		console.log('useEffect')
 		tg.ready()
 	}, [tg])
 
 	const showUser = () => {
-		setname((prevState: string) => user?.usernames || '')
+		console.log(user)
+
+		setname(() => user?.usernames)
 	}
 	return (
 		<React.Fragment>
