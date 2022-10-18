@@ -17,7 +17,7 @@ bot.on('message', (msg) => {
 	// send a message to the chat acknowledging receipt of their message
 	bot.sendMessage(chatId, 'chatId', {
 		reply_markup: {
-			inline_keyboard: [[{ text: 'make an order', web_app: { url: 'https://192.168.1.83:3000' } }]],
+			inline_keyboard: [[{ text: 'make an order', web_app: { url: process.env.URL } }]],
 		},
 	})
 })
