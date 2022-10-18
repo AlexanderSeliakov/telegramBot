@@ -5,8 +5,8 @@ import './button.css'
 
 export const Button = (props: ButtonProps) => {
 	return (
-		<div {...props} className={`button-${props.className}`}>
-			Button
-		</div>
+		<button {...props} className={`button-${props.className}`}>
+			{props.children}
+		</button>
 	)
 }

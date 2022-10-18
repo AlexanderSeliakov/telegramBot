@@ -4,7 +4,7 @@ export interface ReactNode {
 }
 export interface ButtonProps extends ReactNode {
 	className?: string
-	onClick?: () => void
+	onClick: () => void
 }
 export type TelegramHook = () => {
 	onClose: () => void

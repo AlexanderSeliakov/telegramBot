@@ -17,7 +17,7 @@ function App() {
 		<React.Fragment>
 			<Header />
 			<div className='App'>works</div>
-			<Button onClick={onToggleButton}></Button>
+			<Button onClick={onToggleButton}>Toggle</Button>
 		</React.Fragment>
 	)
 }
