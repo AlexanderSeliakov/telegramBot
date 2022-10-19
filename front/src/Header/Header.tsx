@@ -10,7 +10,7 @@ export const Header = () => {
 	return (
 		<div className='header'>
 			<Button onClick={onClose}>Close(Header)</Button>
-			<span className='username'>{user?.usernames} userName</span>
+			<span className='username'>{user?.username} userName</span>
 		</div>
 	)
 }
