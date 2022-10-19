@@ -11,13 +11,20 @@ const bot = new TelegramBot(process.env.TOKEN, { polling: true })
 
 // Listen for any kind of message. There are different kinds of
 // messages.
-bot.on('message', (msg) => {
+bot.on('message', async (msg) => {
 	const chatId = msg.chat.id
 
 	// send a message to the chat acknowledging receipt of their message
-	bot.sendMessage(chatId, 'chatId', {
+	await bot.sendMessage(chatId, 'Button', {
 		reply_markup: {
-			inline_keyboard: [[{ text: 'make an order', web_app: { url: process.env.URL } }]],
+			keyboard: [[{ text: 'make an order' }]],
+		},
+	})
+
+	// send a message to the chat acknowledging receipt of their message
+	await bot.sendMessage(chatId, 'Button', {
+		reply_markup: {
+			inline_keyboard: [[{ text: 'make an order 2', web_app: { url: process.env.URL } }]],
 		},
 	})
 })

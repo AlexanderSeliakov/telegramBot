@@ -9,10 +9,12 @@ function App() {
 	const { tg, onToggleButton, user } = useTelegram()
 
 	const [name, setname] = useState(user?.usernames)
+
 	useEffect(() => {
 		console.log('useEffect')
 		tg.ready()
-	}, [tg])
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	const showUser = () => {
 		console.log(user)

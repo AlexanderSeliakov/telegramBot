@@ -6,12 +6,11 @@ import './header.css'
 
 export const Header = () => {
 	const { onClose, user } = useTelegram()
-	console.log(user)
 
 	return (
 		<div className='header'>
 			<Button onClick={onClose}>Close(Header)</Button>
-			<span className='username'>{user?.usernames} userNme</span>
+			<span className='username'>{user?.usernames} userName</span>
 		</div>
 	)
 }
