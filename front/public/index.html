@@ -17,5 +17,13 @@
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
+		<script>
+			const tg = window.Telegram.WebApp
+			console.log(tg, 'fff')
+
+			setTimeout(() => {
+				alert(tg?.initDataUnsafe.user)
+			}, 3000)
+		</script>
 	</body>
 </html>
