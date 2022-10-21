@@ -2,8 +2,6 @@ import { TelegramHook } from '../Types'
 
 const tg = window.Telegram.WebApp
 
-console.log(tg)
-
 export const useTelegram: TelegramHook = () => {
 	const onClose = () => {
 		tg.close()

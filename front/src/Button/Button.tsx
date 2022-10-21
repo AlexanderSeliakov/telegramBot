@@ -1,4 +1,3 @@
-import React from 'react'
 import { ButtonProps } from '../Types'
 
 import './button.css'
